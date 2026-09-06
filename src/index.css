@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, "Times New Roman", serif;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: #07060a;
+  color: #e4e4e7;
+  min-height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes ember {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10% { opacity: 0.8; }
+  100% { transform: translateY(-110vh) translateX(40px) scale(0.3); opacity: 0; }
+}
+
+@keyframes flame {
+  from { transform: translateX(-50%) scaleY(1) scaleX(1); }
+  to { transform: translateX(-50%) scaleY(1.18) scaleX(0.9); }
+}
+
+canvas {
+  display: block;
+  outline: none;
+}
+
+input[type="range"] { height: 4px; }
