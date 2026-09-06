@@ -16,4 +16,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  server: {
+    // Allow the sandbox/preview host (and any other host) to load the game.
+    allowedHosts: true,
+  },
+  build: {
+    // dev.html is the editable dev entry; `npm run build` inlines everything
+    // into dist/index.html, which scripts/standalone.mjs then copies to the
+    // root index.html so the game runs as a single static file.
+    rollupOptions: {
+      input: path.resolve(__dirname, "dev.html"),
+    },
+  },
 });
